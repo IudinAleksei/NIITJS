@@ -12,3 +12,4 @@ const sum = function (a = 0) {
   return func;
 }
 
+// export default sum;
