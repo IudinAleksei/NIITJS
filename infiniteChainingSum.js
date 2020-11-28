@@ -1,26 +1,14 @@
-// const sum = function (a = 0) {
-//   let sum = a;
+// to get the result, the valueOf(or toString) method must be called explicitly or implicitly
 
-//   const func = (b = 0) => {
-//     sum += b;
-//     return func;
-//   }
+const sum = function (a = 0) {
 
-//   func.valueOf = () => sum;
-//   func.toString = () => sum;
-//   console.log(sum);
+  const func = (b = 0) => {
+    return sum(a + b);
+  }
 
-//   return func;
-// }
-
-var add = function (a) {
-  let func = (b) => {
-    return add(a + b);
-  };
   func.valueOf = () => a;
+  func.toString = () => a;
+
   return func;
 }
 
-var SSum = add(1)(3)(5);
-
-console.log(SSum);

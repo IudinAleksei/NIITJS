@@ -4,4 +4,4 @@ const sum = (a = 0) => {
   }
 }
 
-export default sum;
+// export default sum;
