@@ -1,4 +1,9 @@
 const cloneObj = (sourceObj) => {
+  if(typeof sourceObj !== 'object') {
+    console.error('The argument must be object');
+    return;
+  }
+
   const targetObj = Object.assign({}, sourceObj);
 
   for (prop in targetObj) {
@@ -10,4 +15,4 @@ const cloneObj = (sourceObj) => {
   return targetObj;
 }
 
-export default cloneObj;
+// export default cloneObj;
